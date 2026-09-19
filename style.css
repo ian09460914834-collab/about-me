@@ -27,6 +27,25 @@ h2 { font-size: 1.75rem; margin: var(--space-lg) 0 var(--space-sm); }
 
 a { color: var(--clr-accent); }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-sm);
+  background: var(--clr-navy);
+  color: white;
+  max-width: none;
+  margin: 0 -3rem var(--space-lg);
+}
+.site-header .logo { color: white; font-weight: 700; text-decoration: none; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+}
+.nav-links a { color: white; text-decoration: none; }
+.nav-links a:hover { color: var(--clr-accent); }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
