@@ -30,31 +30,18 @@
   </nav>
 </header>
 <main>
-    <form action="#" method="POST">
-<fieldset>
-<legend>Contact me</legend>
-<p>
-<label for="name">Full name</label>
-<input type="text" id="name" name="name" required minlength="2">
-</p>
-<p>
-<label for="email">Email address</label>
-<input type="email" id="email" name="email" required>
-</p>
-<p>
-<label for="phone">Phone (optional)</label>
-<input type="tel" id="phone" name="phone" pattern="[0-9\-\s]{7,}">
-</p>
-<p>
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="5" required></textarea>
-</p>
-<p>
-<button type="submit">Send</button>
-</p>
-</fieldset>
-</form>
-<article>
+  <picture>
+<source type="image/webp"
+srcset="assets/hero-sm.webp 400w,
+assets/hero-md.webp 800w,
+assets/hero-lg.webp 1600w"
+sizes="(max-width: 600px) 90vw, 800px">
+<img src="assets/hero-md.jpg"
+alt="Descriptive alt text for what is in the photo"
+width="800" height="450"
+loading="lazy">
+</picture>
+  
 <h2>Welcome</h2>
 <address>Camelot Village, Brgy Estefania, Bacolod City</address>
 <a href="mailto:ian09460914834@gmail.com">Email me</a>
