@@ -29,9 +29,6 @@ body {
   color: var(--clr-text);
   background: var(--clr-bg);
   line-height: 1.6;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem 3rem;
 }
 
 img {
@@ -69,16 +66,23 @@ p {
   margin-bottom: 1rem;
 }
 
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER & NAVIGATION — Mobile-first */
 .site-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-sm);
   background: var(--clr-navy);
   color: white;
-  padding: 1rem 1.5rem;
-  margin: 0 -1.25rem 2rem;
+  padding: var(--space-sm);
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .logo {
@@ -93,13 +97,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .nav-links a:hover,
@@ -131,7 +136,7 @@ p {
 }
 
 .hero-text {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .eyebrow {
@@ -165,7 +170,8 @@ p {
 }
 
 .hero-image {
-  width: min(100%, 760px);
+  width: 100%;
+  max-width: 760px;
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(15, 42, 74, 0.08);
 }
@@ -176,7 +182,7 @@ p {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.25rem;
 }
 
@@ -192,7 +198,7 @@ p {
 .content-card,
 .contact-card,
 .contact-form {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .contact-page {
@@ -223,6 +229,7 @@ p {
   display: block;
   margin-bottom: 0.45rem;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .contact-form input,
@@ -259,27 +266,48 @@ p {
 
 footer {
   text-align: center;
-  padding: 2rem 0 1rem;
+  padding: 2rem 1rem 1rem;
   color: var(--clr-muted);
 }
 
 @media (min-width: 768px) {
   .site-header {
     flex-direction: row;
-    padding: 1rem 2rem;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
   }
 
   .nav-links {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: var(--space-md);
   }
 
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
   }
 
+  .hero-text {
+    padding: 2rem;
+  }
+
+  .content-card,
+  .contact-card,
+  .contact-form {
+    padding: 2rem;
+  }
+
   .contact-page {
     grid-template-columns: 0.95fr 1.05fr;
     align-items: start;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 0 2rem;
   }
 }
